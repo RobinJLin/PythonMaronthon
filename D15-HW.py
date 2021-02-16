@@ -24,7 +24,14 @@ print(score_df.groupby('class').agg(['max', 'min']))
 
 #2.找出數學班平均最高的班級?
 MEAN = score_df.groupby('class').mean()
-print(MEAN)
+#print(MEAN)
+
+#參考答案
+#直接寫 ['math_score] 可以達到 class index 的所有班級成績
+print(score_df.groupby('class').mean()['math_score'])
+
+#idmax() 可以找到對過去的index
+print(score_df.groupby('class').mean()['math_score'].idxmax())
 
 #class 2
 #3.分析全校女生與男生國文平均差幾分?
