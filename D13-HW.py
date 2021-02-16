@@ -23,7 +23,7 @@ print(score_df.iloc[[5]].mean(axis=1))
 mean_score = score_df.mean(axis=1)
 print(mean_score.sort_values())
 
-#有
+#沒有
 
 #由於班上同學成績不好，所以學校統一加分，加分方式為開根號乘以十，請問6號同學3科成績分別是?
 
