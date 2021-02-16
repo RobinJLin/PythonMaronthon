@@ -15,3 +15,5 @@ print(series.to_period(freq="W"))
 #這邊要用 resample() 因為resample 會把我們要的時間長度組合一起
 print(series.resample("W").mean())
 #dataWeek.groupby('Freq')
+
+#please see for resample() usage  https://kknews.cc/zh-tw/code/l456yje.html
