@@ -15,9 +15,13 @@ score_df = score_df.set_index('student_id')
 print(score_df)
 
 #1.6號學生(student_id=6)3科平均分數為何?
+#0217 我原本的寫法
+#print(score_df.iloc[[5]].mean(axis=1))
 
-print(score_df.iloc[[5]].mean(axis=1))
 
+#print(score_df.values[5].mean())
+
+print(f"六號的平均{score_df[score_df.index == 6].values.mean()}")
 
 #2. 6號學生3科平均分數是否有贏過班上一半的同學
 mean_score = score_df.mean(axis=1)
